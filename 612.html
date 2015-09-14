@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	.hide {display: none;}
+	.warn {color: #ffff66; background-color: #333;}
+	.error {color: #ff9966; background-color: #000;}
+	.pass {color: white; background-color: green;}
+	.fail {color: white; background-color: red;}
+	</style>
+</head>
+<body>
+
+<form action="/register" method="post" name="register">
+	<div class="name">
+		<label for="name" class="required">Name:</label>
+		<input type="text" placeholder="Enter your name" name="name" id="name" required title="Please enter your name">
+	</div>
+	<div class="email">
+		<label for="email" class="required">Email:</label>
+		<input type="email" placeholder="you@example.com" name="email" id="email" required>
+	</div>
+	<div class="password">
+		<label for="password" class="required">Password:</label>
+		<input type="password" name="password" id="password" required>
+	</div>
+	<div class="password">
+		<label for="conf-password" class="required">Confirm password:</label>
+		<input type="password" name="conf-password" id="conf-password" required>
+	</div>
+	<div class="birthday">
+		<label for="birthday" class="required">Birthday:</label>
+		<input type="date" name="birthday" id="birthday" placeholder="yyyy-mm-dd" required>
+		<div id="consent-container" class="hide">
+			<label for="parents-consent">you need a parent's permission to join. Tick here if your child can join:</label>
+			<input type="checkbox" name="parents-consent" id="parents-consent">
+		</div>
+	</div>
+	<div class="bio">
+		<label for="bio">Short Bio (max 140 characters):</label>
+		<textarea name="bio" id="bio" cols="30" rows="5"></textarea>
+		<span id="bio-count" class="hide">140</span>
+	</div>
+	<div class="register"><input type="submit" value="Register"></div>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="578.js"></script>
+<script type="text/javascript" src="629-polyfill.js"></script>
+<script type="text/javascript" src="628-password-signup.js"></script>
+<script type="text/javascript" src="626-birthday.js"></script>
+
+<script src="js/validation.js"></script>
+<!-- <script type="text/javascript" src="612-validate.js"></script> -->
+<script type="text/javascript" src="629-bio.js"></script>
+
+
+
+
+</body>
+</html>
